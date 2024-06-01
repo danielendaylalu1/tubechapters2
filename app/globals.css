@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-image: linear-gradient(
+    to bottom,
+    #121316,
+    #121316,
+    #121316,
+    #121316,
+    #121316,
+    #15171d,
+    #181a23,
+    #1b1e2a,
+    #23263a,
+    #2d2d49,
+    #393459,
+    #483b68
+  );
+  min-height: 100vh;
+  color: white;
+}
+
+.btn {
+  background-color: rgb(172, 86, 255);
+  box-shadow: rgb(172, 86, 255) 0px -1px 11px;
+}
+.btn:hover {
+  box-shadow: rgb(172, 86, 255) 0px -1px 31px;
+}
+.contact:hover {
+  box-shadow: rgb(172, 86, 255) 0px -1px 11px;
+  cursor: pointer;
+}
+
+.video {
+  background-color: transparent;
+  border: 1px solid rgb(172, 86, 255);
+  transform: scale(1.1);
+}
+.play {
+  transition: all 0.4s ease-in-out;
+}
+.play:hover {
+  transform: scale(1.2);
+}
