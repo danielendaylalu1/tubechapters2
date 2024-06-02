@@ -1,10 +1,10 @@
 import Form from "@/components/Form";
-import Image from "next/image";
+import { getSummery } from "../api/api";
 
 export default function Home() {
   return (
     <main>
-      <Form />
+      <Form getSummery={getSummery} />
     </main>
   );
 }
