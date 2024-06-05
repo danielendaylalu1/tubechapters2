@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Select from "react-select";
 import ResultContainer from "./ResultContainer";
 import CopyHandler from "./CopyHandler";
 import Video from "../components/Video";
@@ -46,19 +45,31 @@ const Form = ({ getSummery }) => {
   };
   return (
     <div className="w-full flex flex-col items-center gap-y-6">
-      <div className="flex justify-center items-center gap-x-2">
+      <div className="flex flex-col gap-y-4 justify-center items-center gap-x-2">
         <h2 className=" text-primary font-normal text-xs">
           Chapter and Summery Language
         </h2>
-        <Select
-          className="basic-single self-center cursor-pointer"
-          classNamePrefix="select"
-          defaultValue={langOptions[0]}
-          options={langOptions}
-          onChange={languageHandler}
-        />
+        <div className="flex gap-x-4">
+          {langOptions.map((item) => {
+            return (
+              <h2
+                key={item.value}
+                className={` text-primary font-normal text-lg opacity-90 cursor-pointer px-2 py-1 rounded-lg ${
+                  language === item.value && "bg-white/80"
+                }`}
+                onClick={() => {
+                  languageHandler(item);
+                }}
+              >
+                {item.label}
+              </h2>
+            );
+          })}
+        </div>
+
+        <h2 className=" text-primary font-normal text-xs">{`>>>`}</h2>
       </div>
-      <div className="max-w-[600px] min-w-[500px] flex gap-x-4 items-center">
+      <div className="max-w-[600px] min-w-[100%] md:min-w-[500px] flex flex-col sm:flex-row gap-4 items-center">
         <input
           type="text"
           placeholder="https://www.youtube.com/watch?v="

@@ -64,3 +64,6 @@ body {
     transform: rotate(360deg);
   }
 }
+.navbar {
+  transition: all 0.25s ease-in-out;
+}
