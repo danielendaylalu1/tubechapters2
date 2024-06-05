@@ -89,14 +89,14 @@ const Form = ({ getSummery }) => {
               setData([]);
               setVidId("");
               setLoading(true);
+              const videoIdSimple = extractVideoIdSimple(url);
+              setVidId(videoIdSimple);
               let data = await getSummery(url.trim(), chapterType, language);
               if (typeof data !== "string") {
                 setLoading(false);
                 setError(false);
                 setDesc(data.summery);
                 setData(data.chapters);
-                const videoIdSimple = extractVideoIdSimple(url);
-                setVidId(videoIdSimple);
               } else {
                 setLoading(false);
                 setError(true);
