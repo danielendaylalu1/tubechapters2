@@ -25,6 +25,7 @@ body {
 .btn {
   background-color: rgb(172, 86, 255);
   box-shadow: rgb(172, 86, 255) 0px -1px 11px;
+  min-width: 180px;
 }
 .btn:hover {
   box-shadow: rgb(172, 86, 255) 0px -1px 31px;

@@ -46,8 +46,8 @@ const Form = ({ getSummery }) => {
   return (
     <div className="w-full flex flex-col items-center gap-y-6">
       <div className="flex flex-col gap-y-4 justify-center items-center gap-x-2">
-        <h2 className=" text-primary font-normal text-xs">
-          Chapter and Summery Language
+        <h2 className=" text-primary font-normal text-lg">
+          Select Chapters Language
         </h2>
         <div className="flex gap-x-4">
           {langOptions.map((item) => {
@@ -69,7 +69,7 @@ const Form = ({ getSummery }) => {
 
         <h2 className=" text-primary font-normal text-xs">{`>>>`}</h2>
       </div>
-      <div className="max-w-[600px] min-w-[100%] md:min-w-[500px] flex flex-col sm:flex-row gap-4 items-center">
+      <div className="max-w-[800px] min-w-[100%] md:min-w-[500px] flex flex-col sm:flex-row gap-4 items-center">
         <input
           type="text"
           placeholder="https://www.youtube.com/watch?v="
@@ -79,7 +79,7 @@ const Form = ({ getSummery }) => {
 
         <button
           type="button"
-          className="btn py-3 px-8 rounded-full outline-none"
+          className="btn py-3 px-6 rounded-full outline-none text-sm"
           onClick={async () => {
             if (url !== "") {
               setError(false);
@@ -108,7 +108,7 @@ const Form = ({ getSummery }) => {
             }
           }}
         >
-          {loading ? <span className="loader"></span> : "Generate"}
+          {loading ? <span className="loader"></span> : "Generate Captions"}
         </button>
       </div>
       {error && <p className="text-sm text-red-600 text-left">{errorText}</p>}
