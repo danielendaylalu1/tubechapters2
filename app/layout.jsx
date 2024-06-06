@@ -9,12 +9,6 @@ export const metadata = {
     "Use our YouTube chapters tool (powered by AI) to generate engaging and accurate captions for your YouTube videos. Always free and unlimited usage!",
 };
 
-const jacques_Francois = Jacques_Francois({
-  weight: ["400"],
-  style: ["normal"],
-  subsets: ["latin"],
-  display: "swap",
-});
 const roboto = Roboto({
   weight: ["400"],
   style: ["normal"],
