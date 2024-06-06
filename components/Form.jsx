@@ -55,7 +55,7 @@ const Form = ({ getSummery }) => {
               <h2
                 key={item.value}
                 className={` text-primary font-normal text-lg opacity-90 cursor-pointer px-2 py-1 rounded-lg ${
-                  language === item.value && "bg-white/80"
+                  language === item.value && "bg-[#121316]"
                 }`}
                 onClick={() => {
                   languageHandler(item);
