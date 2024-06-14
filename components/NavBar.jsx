@@ -12,8 +12,8 @@ const NavBar = () => {
     tNav('nav-items').replace(/'/g, '"').replace(/،/g, ',')
   );
   return (
-    <div className="flex justify-between items-center w-full">
-      <div className="flex gap-x-4 items-center">
+    <div className="flex justify-between items-center w-full ">
+      <div className="flex flex-col sm:flex-row gap-x-4 items-center">
         <a href="/" className="text-2xl font-bold">
           Tubechapters
         </a>
